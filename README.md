@@ -5,10 +5,11 @@ The project can be resumed as : `Two guys with poor skills in assembly try to cr
 ## Build
 
 To build the project you need 
+- make
 - nasm
 - gcc
 - ld
 
-Under debian : `sudo apt install nasm gcc binutils`
+Under debian : `sudo apt install nasm gcc binutils make`
 
 Just run `make`
