@@ -9,18 +9,19 @@ section .bss
     result resb 16
 
 section .data
-    txt1 db "Quel est la longeur du premier nombre ? "
+    txt1 db "Length of the first side : "
     txt1_l equ $-txt1
-    txt2 db "Quel est la longeur du second nombre ? "
+    txt2 db "Length of the second side : "
     txt2_l equ $-txt2
-    res db "L",0x27,"hypothenuse vaut : "
+    res db "Length of the hypotenuse  : "
     res_l equ $-res
     aa db 0xa
 
 section .text
 
-global _start
 extern le_sqrt 
+
+global _start
 
 _start:
     mov rax, 0x1
@@ -63,7 +64,7 @@ _start:
     mov rbx,r11
     mul rax
 
-    add r12,rax            ;r12 contient a²+b²
+    add r12,rax            ;r12 contains a²+b²
 
     mov rdi,r12
     call le_sqrt
@@ -94,11 +95,6 @@ _start:
     mov rsi, aa
     syscall
 
-; input R14 => value
-; input R11 => log10 of the value
-; input R15 => adress of the string
-
-
 _exit:
     mov rax,0x3c
     mov rsi,0x0
@@ -106,9 +102,9 @@ _exit:
 
 _lenght_int:
     mov r14,0
-    push rax ; diviseur
-    push rbx ;dividende
-    push r12 ;Résulat c (a²+b²=c²)
+    push rax ; divisor
+    push rbx ; dividend
+    push r12 ; Result c (a²+b²=c²)
 _lenght_int_loop:
 
     mov rax,r12
