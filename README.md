@@ -4,6 +4,8 @@ The project can be resumed as : `Two guys with poor skills in assembly try to cr
 
 This project included a C funtion, "sqrt.c", an atoi and an iota
 
+Video who explained the full project step by step :  https://www.youtube.com/watch?v=8g3RBZFb1Tc
+
 ## Build
 
 To build the project you need 
